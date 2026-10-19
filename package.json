@@ -1,0 +1,15 @@
+{
+  "name": "watertracker",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": { "node": ">=22" },
+  "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
+  "repository": { "type": "git", "url": "git+https://github.com/freeappstore-online/watertracker.git" },
+  "scripts": {
+    "dev": "pnpm --filter @watertracker/web dev",
+    "build": "pnpm --filter @watertracker/web build",
+    "preview": "pnpm --filter @watertracker/web preview",
+    "typecheck": "pnpm --filter @watertracker/web exec tsc -b",
+    "test": "node --test scripts/shell.test.mjs && pnpm --filter @watertracker/web exec tsc -b"
+  }
+}
